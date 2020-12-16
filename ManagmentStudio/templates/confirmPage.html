@@ -1,0 +1,137 @@
+<<<<<<< HEAD
+
+{% extends 'base.html' %}
+
+
+{% block title %}Register{% endblock title %}
+
+
+
+
+{% block body %}
+
+<div style="text-align: center; margin-top: 20px; ">
+    <h1 style="color:#218838">تم تسجيل البيانات بنجاح</h1>
+</div>
+
+<div class="container">
+
+    <form method="post" action="{% url 'Register'%}"   >
+         {% csrf_token %}
+
+        {%for person in personData%}
+        <label style="color:#218838" class="font-weight-bold">اسم المواطن :</label>
+         <div class="form-group font-weight-bold " >
+
+             {{person.name}}
+      </div>
+
+        <label style="color:#218838"  class="font-weight-bold">رقم الهاتف :</label>
+         <div class="form-group font-weight-bold  ">
+        {{person.phone}}
+      </div>
+
+         <label style="color:#218838"  class="font-weight-bold"> العنوان :</label>
+      <div class="form-group font-weight-bold ">
+          {{person.address}}
+      </div>
+
+         <label style="color:#218838"  class="font-weight-bold">الشكوى :</label>
+        <div class="form-group font-weight-bold  ">
+            {{person.data}}
+        </div>
+
+         <label style="color:#218838"  class="font-weight-bold">الجهة المعنية :</label>
+
+        <div class="form-group font-weight-bold  ">
+            {{person.locationOfData}}
+        </div>
+
+         <label style="color:#218838"  class="font-weight-bold">الشكوى  :</label>
+
+        <div class="form-group font-weight-bold  ">
+            {{person.typeOfData}}
+        </div>
+
+        <label style="color:#218838"  class="font-weight-bold">باقي الشكوى  :</label>
+
+        <div class="form-group font-weight-bold  ">
+            {{person.argument}}
+        </div>
+
+  {%endfor%}
+         <button type="submit" value="Register" class="btn btn-danger">رجوع</button>
+
+    </form>
+
+</div>
+{% endblock body %}
+=======
+
+{% extends 'base.html' %}
+
+
+{% block title %}Register{% endblock title %}
+
+
+
+
+{% block body %}
+
+<div style="text-align: center; margin-top: 20px; ">
+    <h1 style="color:#218838">تم تسجيل البيانات بنجاح</h1>
+</div>
+
+<div class="container">
+
+    <form method="post" action="{% url 'Register'%}"   >
+         {% csrf_token %}
+
+        {%for person in personData%}
+        <label style="color:#218838" class="font-weight-bold">اسم المواطن :</label>
+         <div class="form-group font-weight-bold " >
+
+             {{person.name}}
+      </div>
+
+        <label style="color:#218838"  class="font-weight-bold">رقم الهاتف :</label>
+         <div class="form-group font-weight-bold  ">
+        {{person.phone}}
+      </div>
+
+         <label style="color:#218838"  class="font-weight-bold"> العنوان :</label>
+      <div class="form-group font-weight-bold ">
+          {{person.address}}
+      </div>
+
+         <label style="color:#218838"  class="font-weight-bold">الشكوى :</label>
+        <div class="form-group font-weight-bold  ">
+            {{person.data}}
+        </div>
+
+         <label style="color:#218838"  class="font-weight-bold">الجهة المعنية :</label>
+
+        <div class="form-group font-weight-bold  ">
+            {{person.locationOfData}}
+        </div>
+
+         <label style="color:#218838"  class="font-weight-bold">الشكوى  :</label>
+
+        <div class="form-group font-weight-bold  ">
+            {{person.typeOfData}}
+        </div>
+
+        <label style="color:#218838"  class="font-weight-bold">باقي الشكوى  :</label>
+
+        <div class="form-group font-weight-bold  ">
+            {{person.argument}}
+        </div>
+
+  {%endfor%}
+         <button type="submit" value="Register" class="btn btn-danger">رجوع</button>
+
+    </form>
+
+</div>
+{% endblock body %}
+>>>>>>> bb806d06e1365e7e16a45a26f04abc01c041c109

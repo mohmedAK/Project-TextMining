@@ -1,0 +1,89 @@
+<<<<<<< HEAD
+
+{% extends 'base.html' %}
+
+
+{% block title %}Register{% endblock title %}
+
+
+
+
+{% block body %}
+
+<div style="text-align: center;">
+    <h1>يرجى ملئ البيانات</h1>
+</div>
+
+<div class="container">
+
+    <form method="post" action="{% url 'add_person_data'%}"   >
+         {% csrf_token %}
+
+      <div class="form-group font-weight-bold" >
+        <label >اسم الشخص</label>
+        {{form.name}}
+      </div>
+
+       <div class="form-group font-weight-bold">
+        <label>رقم الهاتف</label>
+        {{form.phone}}
+      </div>
+      <div class="form-group font-weight-bold">
+        <label>العنوان</label>
+          {{form.address}}
+      </div>
+        <div class="form-group font-weight-bold">
+           <label>الشكوى</label>
+            {{form.data}}
+        </div>
+
+      <button type="submit" value="" class="btn btn-primary">تسجيل الشكوى</button>
+    </form>
+
+</div>
+{% endblock body %}
+=======
+
+{% extends 'base.html' %}
+
+
+{% block title %}Register{% endblock title %}
+
+
+
+
+{% block body %}
+
+<div style="text-align: center;">
+    <h1>يرجى ملئ البيانات</h1>
+</div>
+
+<div class="container">
+
+    <form method="post" action="{% url 'add_person_data'%}"   >
+         {% csrf_token %}
+
+      <div class="form-group font-weight-bold" >
+        <label >اسم الشخص</label>
+        {{form.name}}
+      </div>
+
+       <div class="form-group font-weight-bold">
+        <label>رقم الهاتف</label>
+        {{form.phone}}
+      </div>
+      <div class="form-group font-weight-bold">
+        <label>العنوان</label>
+          {{form.address}}
+      </div>
+        <div class="form-group font-weight-bold">
+           <label>الشكوى</label>
+            {{form.data}}
+        </div>
+
+      <button type="submit" value="" class="btn btn-primary">تسجيل الشكوى</button>
+    </form>
+
+</div>
+{% endblock body %}
+>>>>>>> bb806d06e1365e7e16a45a26f04abc01c041c109
